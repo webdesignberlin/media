@@ -1,3 +1,12 @@
 <h1>
   {{title}}
 </h1>
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['/media']" routerLinkActive="active">Media Overview</a>
+    </li>
+  </ul>
+</nav>
+<!--<app-media></app-media>-->
+<router-outlet></router-outlet>
