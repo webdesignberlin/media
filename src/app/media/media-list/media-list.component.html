@@ -1,0 +1,10 @@
+<p>
+  media-list works!
+</p>
+<a (click)="onNewMedia()">add Media</a>
+
+<app-media-item
+        *ngFor="let media of mediaList; let i = index"
+        [media]="media"
+        [mediaId]="i"
+></app-media-item>
