@@ -4,6 +4,8 @@
 
   <button type="submit"
           [disabled]="!mediaForm.valid">save</button>
+  <button type="button"
+          (click)="onCancel()">cancel</button>
 
   <label for="name">title</label>
   <input type="text"

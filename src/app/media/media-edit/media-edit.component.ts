@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MediaService} from "../media.service";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-media-edit',
@@ -12,12 +13,22 @@ export class MediaEditComponent implements OnInit {
   mediaForm: FormGroup;
 
   constructor(
-      private mediaService: MediaService
+      private mediaService: MediaService,
+      private router: Router
   ) { }
 
   onSubmit(){
     const newMedia = this.mediaForm.value;
     this.mediaService.addMedia(newMedia);
+    this.onNavigateBack();
+  }
+
+  onCancel(){
+    this.onNavigateBack();
+  }
+
+  onNavigateBack(){
+    this.router.navigate(['/']);
   }
 
   ngOnInit() {
