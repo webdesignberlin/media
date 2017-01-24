@@ -12,8 +12,8 @@ import {Media} from "./media.model";
 
 export class MediaService {
   private mediaList: Media[] = [
-    new Media('Platte 1', 'Tolle Beschreibung'),
-    new Media('Platte 2', 'Zweite Beschreibung')
+    new Media('Platte 1', 'Tolle Beschreibung', 'https://placehold.it/350x150'),
+    new Media('Platte 2', 'Zweite Beschreibung', 'https://placehold.it/350x150')
   ];
 
   getMedia() {
@@ -30,6 +30,10 @@ export class MediaService {
 
   addMedia(media: Media){
     this.mediaList.push(media);
+  }
+
+  editMedia(oldMedia: Media, newMedia: Media){
+    this.mediaList[this.mediaList.indexOf(oldMedia)] = newMedia;
   }
 
 }
