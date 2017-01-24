@@ -1,3 +1,27 @@
-<p>
-  media-edit works! (Bearbeiten)
-</p>
+<h1>Media edit</h1>
+
+<form [formGroup]="mediaForm" (ngSubmit)="onSubmit()">
+
+  <button type="submit"
+          [disabled]="!mediaForm.valid">save</button>
+
+  <label for="name">title</label>
+  <input type="text"
+         id="name"
+         formControlName="name">
+
+  <label for="description">description</label>
+  <input type="text"
+         id="description"
+         formControlName="description"
+  >
+
+  <label for="image-path">image path</label>
+  <input type="text"
+         id="image-path"
+         formControlName="imagePath"
+         #imagePath>
+
+  <img [src]="imagePath.value">
+
+</form>

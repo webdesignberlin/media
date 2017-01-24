@@ -28,4 +28,8 @@ export class MediaService {
     this.mediaList.splice(id, 1)
   }
 
+  addMedia(media: Media){
+    this.mediaList.push(media);
+  }
+
 }
