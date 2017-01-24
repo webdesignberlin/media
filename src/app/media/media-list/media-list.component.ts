@@ -23,6 +23,9 @@ export class MediaListComponent implements OnInit {
 
   ngOnInit() {
     this.mediaList = this.mediaService.getMedia();
+    this.mediaService.mediaChanged.subscribe(
+        (mediaList: Media[]) => this.mediaList = mediaList
+    );
   }
 
 }

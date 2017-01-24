@@ -12,6 +12,7 @@ import {routing} from "./app.routing";
 import { MediaStartComponent } from './media/media-start.component';
 import { MediaEditComponent } from './media/media-edit/media-edit.component';
 import {MediaService} from "./media/media.service";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MediaService} from "./media/media.service";
     MediaDetailComponent,
     MediaItemComponent,
     MediaStartComponent,
-    MediaEditComponent
+    MediaEditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
