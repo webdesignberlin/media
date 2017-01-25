@@ -1,10 +1,9 @@
 import {Routes, RouterModule} from "@angular/router";
-import {MediaComponent} from "./media/media.component";
-import {MEDIA_ROUTES} from "./media/media.routes";
+import {HomeComponent} from "./home.component";
 
 const APP_ROUTES: Routes = [
-    {path: '', redirectTo: '/media', pathMatch: 'full'},
-    {path: 'media', component: MediaComponent, children: MEDIA_ROUTES}
+    {path: '', component: HomeComponent},
+    {path: 'media', loadChildren: 'app/media/media.module#MediaModule'}
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
