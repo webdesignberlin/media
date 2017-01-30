@@ -1,5 +1,7 @@
-<p>
-  header works!
-</p>
-<button (click)="onStore()">save</button>
-<button (click)="onFetech()">load data</button>
+<header *ngIf="isAuthenticated">
+  <a [routerLink]="['signin']">Sign In</a>
+
+  <button (click)="onStore()">save</button>
+  <button (click)="onFetech()">load data</button>
+  <button (click)="onLogout()">Logout</button>
+</header>

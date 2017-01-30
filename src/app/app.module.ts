@@ -7,19 +7,27 @@ import {routing} from "./app.routing";
 import {MediaService} from "./media/media.service";
 import { HeaderComponent } from './header/header.component';
 import {HomeComponent} from "./home.component";
+import { SignupComponent } from './login/signup/signup.component';
+import { SigninComponent } from './login/signin/signin.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {AuthService} from "./login/auth.service";
+import {MediaGuard} from "./media/media.guard";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     routing,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
-  providers: [MediaService],
+  providers: [MediaService, AuthService, MediaGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+<h1>Please sign up</h1>
+
+<form [formGroup]="signInForm" (ngSubmit)="onSignin()">
+    <label for="email">E-Mail</label>
+    <input formControlName="email" type="email" id="email">
+
+    <label for="password">Password</label>
+    <input formControlName="password" type="password" id="password">
+
+    <button type="submit" [disabled]="!signInForm.valid">Sign In</button>
+</form>
