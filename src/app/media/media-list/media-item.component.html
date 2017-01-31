@@ -1,4 +1,10 @@
-<a [routerLink]="[mediaId]" routerLinkActive="active">
-<h2>Name: {{ media.name }}</h2>
-<p>Description: {{ media.description }}</p>
-</a>
+<section class="media-item">
+    <a
+        [routerLink]="[mediaId]"
+        class="media-item__link"
+        routerLinkActive="media-item__link--active">
+        <h2 class="headline headline--ganna media-item__headline">Name: {{ media.name }}</h2>
+        <img [src]="media.imagePath">
+        <p class="media-item__description">Description: {{ media.description }}</p>
+    </a>
+</section>

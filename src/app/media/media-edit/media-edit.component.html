@@ -1,25 +1,35 @@
-<h1>Media edit</h1>
+<h3 class="headline headline--delta">Media edit</h3>
 
-<form [formGroup]="mediaForm" (ngSubmit)="onSubmit()">
+<form
+  [formGroup]="mediaForm"
+  class="form"
+  (ngSubmit)="onSubmit()">
 
-  <button type="submit"
-          [disabled]="!mediaForm.valid">save</button>
-  <button type="button"
-          (click)="onCancel()">cancel</button>
+  <p>
+    <button type="submit"
+            class="btn"
+            [disabled]="!mediaForm.valid">save</button>
+    <button type="button"
+            class="btn"
+            (click)="onCancel()">cancel</button>
+  </p>
 
-  <label for="name">title</label>
+  <label for="name" class="form__label">title</label>
   <input type="text"
+         class="form__input"
          id="name"
          formControlName="name">
 
-  <label for="description">description</label>
+  <label for="description" class="form__label">description</label>
   <input type="text"
+         class="form__input"
          id="description"
          formControlName="description"
   >
 
-  <label for="image-path">image path</label>
+  <label for="image-path" class="form__label">image path</label>
   <input type="text"
+         class="form__input"
          id="image-path"
          formControlName="imagePath"
          #imagePath>

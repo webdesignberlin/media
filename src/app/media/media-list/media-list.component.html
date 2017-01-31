@@ -1,7 +1,6 @@
 <p>
-  media-list works!
+    <a class="btn" (click)="onNewMedia()">add Media</a>
 </p>
-<a (click)="onNewMedia()">add Media</a>
 
 <app-media-item
         *ngFor="let media of mediaList; let i = index"

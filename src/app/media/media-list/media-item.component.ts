@@ -5,7 +5,7 @@ import {MediaService} from "../media.service";
 @Component({
   selector: 'app-media-item',
   templateUrl: './media-item.component.html',
-  styleUrls: ['./media-item.component.css']
+  styleUrls: ['./media-item.component.scss']
 })
 export class MediaItemComponent implements OnInit {
   @Input() media: Media;

@@ -1,9 +1,7 @@
-<p>
-  media-detail works!
-</p>
+<ul class="list-unstyled">
+  <li>Name: {{ selectedMedia?.name }}</li>
+  <li>Description: {{ selectedMedia?.description }}</li>
+</ul>
 
-Detailname: {{ selectedMedia?.name }}
-Detal Description: {{ selectedMedia?.description }}
-
-<button (click)="onEditMedia()">Edit</button>
-<button (click)="onDeleteMedia()">Delete</button>
+<button class="btn" (click)="onEditMedia()">Edit</button>
+<button class="btn" (click)="onDeleteMedia()">Delete</button>
