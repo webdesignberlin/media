@@ -20,8 +20,85 @@ $colors: (
   /// Color Blue
   /// @group Colors
   /// @type Color
-        'color-definition__blue': #301968
+        'color-definition__blue': #145C94,
+  /// Color Yellow
+  /// @group Colors
+  /// @type Color
+        'color-definition__yellow': #E6B112,
+  /// Color Orange
+  /// @group Colors
+  /// @type Color
+        'color-definition__orange': #E64E12
+
 );
+
+/*
+Palette URL: http://paletton.com/#uid=33x0u0kt-sQin-hnmuyuUmLAMhM
+
+
+5287B0
+RGB: 82–135–176
+RGB [%]: 32.2–52.9–69
+
+326E9D
+RGB: 50–110–157
+RGB [%]: 19.6–43.1–61.6
+
+145C94
+RGB: 20–92–148
+RGB [%]: 7.8–36.1–58
+
+0B4775
+RGB: 11–71–117
+RGB [%]: 4.3–27.8–45.9
+
+05365B
+RGB: 5–54–91
+RGB [%]: 2–21.2–35.7
+Secondary color #1
+
+FFDA6D
+RGB: 255–218–109
+RGB [%]: 100–85.5–42.7
+
+F3C742
+RGB: 243–199–66
+RGB [%]: 95.3–78–25.9
+
+E6B112
+RGB: 230–177–18
+RGB [%]: 90.2–69.4–7.1
+
+B58906
+RGB: 181–137–6
+RGB [%]: 71–53.7–2.4
+
+8E6A00
+RGB: 142–106–0
+RGB [%]: 55.7–41.6–0
+Secondary color #2
+
+FF966D
+RGB: 255–150–109
+RGB [%]: 100–58.8–42.7
+
+F37442
+RGB: 243–116–66
+RGB [%]: 95.3–45.5–25.9
+
+E64E12
+RGB: 230–78–18
+RGB [%]: 90.2–30.6–7.1
+
+B53806
+RGB: 181–56–6
+RGB [%]: 71–22–2.4
+
+8E2800
+RGB: 142–40–0
+RGB [%]: 55.7–15.7–0
+
+*/
 /* colors@> */
 
 /// Color Foreground
@@ -34,8 +111,12 @@ $color-foreground:  map-get($colors, color-definition__black);
 $color-background:  map-get($colors, color-definition__white);
 /// Color Primary
 /// @group Colors
-/// @require $color-cd-blue
+/// @require $color-definition__blue
 $color-primary:     map-get($colors, color-definition__blue);
+/// Color Interactive
+/// @group Colors
+/// @require $color-definition__orange
+$color-interactive:     map-get($colors, color-definition__orange);
 /* = Colors */
 
 /* + Z-Indexes */
