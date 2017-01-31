@@ -1,11 +1,38 @@
-<h1>Please sign up</h1>
+<div class="row">
+    <div class="columns small-12">
+        <h1 class="headline headline--alpha">Sign in</h1>
+    </div>
 
-<form [formGroup]="signInForm" (ngSubmit)="onSignin()">
-    <label for="email">E-Mail</label>
-    <input formControlName="email" type="email" id="email">
 
-    <label for="password">Password</label>
-    <input formControlName="password" type="password" id="password">
+    <div class="column small-12 large-4">
+        <form
+            [formGroup]="signInForm"
+            (ngSubmit)="onSignin()"
+            class="form">
 
-    <button type="submit" [disabled]="!signInForm.valid">Sign In</button>
-</form>
+            <label
+                for="email"
+                class="form__label">E-Mail</label>
+            <input
+                formControlName="email"
+                type="email"
+                class="form__input"
+                id="email">
+
+            <label
+                for="password"
+                class="form__label">Password</label>
+            <input
+                formControlName="password"
+                type="password"
+                class="form__input"
+                id="password">
+
+            <button
+                type="submit"
+                [disabled]="!signInForm.valid"
+                class="btn">Sign In</button>
+        </form>
+    </div>
+
+</div>
