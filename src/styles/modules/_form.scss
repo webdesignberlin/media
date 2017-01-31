@@ -1,4 +1,5 @@
 $form-color-input: map_get($colors, color-definition__white);
+$form-color-highlight: map_get($colors, color-definition__orange);
 
 .form {
 
@@ -13,7 +14,9 @@ $form-color-input: map_get($colors, color-definition__white);
     border-radius: 0;
     max-width: 100%;
     padding: $spacing-small;
+    margin-bottom: $spacing-normal;
     border: 1px solid $form-color-input;
+    border-bottom-color: $form-color-highlight;
     background-color: $form-color-input;
     transition: border 0.3s ease, background 0.15s ease-in;
 
