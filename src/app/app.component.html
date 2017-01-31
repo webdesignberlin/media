@@ -1,13 +1,11 @@
 <app-header></app-header>
-<h1>
-  {{title}}
-</h1>
 <nav>
-  <ul>
-    <li>
-      <a [routerLink]="['/media']" routerLinkActive="active">Media Overview</a>
-    </li>
-  </ul>
+  <div class="column">
+    <ul class="list-unstyled">
+      <li>
+        <a [routerLink]="['/media']" routerLinkActive="active">Media Overview</a>
+      </li>
+    </ul>
+  </div>
 </nav>
-<!--<app-media></app-media>-->
 <router-outlet></router-outlet>

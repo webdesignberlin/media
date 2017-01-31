@@ -1,7 +1,11 @@
-<header *ngIf="isAuthenticated">
-  <a [routerLink]="['signin']">Sign In</a>
+<header *ngIf="isAuthenticated" class="app-header">
+  <div class="row">
+    <div class="column">
+      <a class="btn" [routerLink]="['signin']">Sign In</a>
 
-  <button (click)="onStore()">save</button>
-  <button (click)="onFetech()">load data</button>
-  <button (click)="onLogout()">Logout</button>
+      <button class="btn" (click)="onStore()">save</button>
+      <button class="btn" (click)="onFetech()">load data</button>
+      <button class="btn" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
 </header>
