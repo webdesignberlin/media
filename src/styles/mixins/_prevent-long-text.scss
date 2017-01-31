@@ -1,0 +1,11 @@
+@mixin prevent-long-text() {
+    /*white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    hyphens: auto;
+    */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}

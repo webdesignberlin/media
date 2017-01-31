@@ -1,0 +1,36 @@
+/**
+ * Main File
+ * Main Styles including Mixins, Functions, Variables and general Styles.
+ * NOTE: Only Imports
+ *
+ * @author michael gerstmann @top_webdesign
+ */
+
+/// if theme:
+/// $theme: 'theme-1';
+
+/// Variables
+@import "styles/variables";
+
+/// Frameworks
+@import "styles/foundation-custom";
+
+/// Mixins
+@import "styles/mixins/clearfix";
+@import "styles/mixins/font-size";
+@import "styles/mixins/font-weight";
+@import "styles/mixins/prevent-long-text";
+@import "styles/mixins/design-module-shadow";
+
+/// Preparation
+@import "styles/partials/normalize";
+@import "styles/partials/helper";
+@import "styles/partials/typo";
+
+/// Project Styles
+@import 'styles/modules/btn';
+@import "styles/modules/form";
+
+@import "styles/styles";
+
+

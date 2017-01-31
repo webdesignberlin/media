@@ -1,0 +1,45 @@
+$btn-spacing: $spacing-normal;
+$btn-hover-opacity: 0.8;
+$btn-color-cta: $color-primary;
+$btn-color-cta__text: map_get($colors, color-definition__white);
+
+%btn,
+.btn {
+    @include font-weight('normal');
+    @include font-size(14px);
+
+    line-height: 1.2;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid $btn-color-cta;
+    padding: ($btn-spacing / 2) $btn-spacing;
+    user-select: none;
+    text-decoration: none;
+
+    background-color: $btn-color-cta;
+    color: $btn-color-cta__text;
+    margin-bottom: ($btn-spacing / 4);
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+        opacity: $btn-hover-opacity;
+    }
+
+    &--ghostcta {
+        background-color: transparent;
+        border-color: $btn-color-cta;
+        color: $btn-color-cta;
+    }
+
+    &--full {
+        width: 100%;
+    }
+}

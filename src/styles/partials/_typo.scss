@@ -1,0 +1,36 @@
+%typo,
+.typo {
+    &-copy {
+        @include font-size(16px);
+        line-height: $line-height-normal;
+        margin-top: $spacing-normal;
+        margin-bottom: $spacing-normal;
+    }
+}
+
+%headline,
+.headline {
+    @media (max-width: map_get($breakpoints, large)) {
+        @include prevent-long-text;
+    }
+    @include font-weight('bold');
+    line-height: $line-height-normal / 1.25;
+    margin-top: $spacing-normal;
+    margin-bottom: $spacing-small;
+
+    &--alpha {
+        @include font-size(36px);
+    }
+
+    &--beta {
+        @include font-size(30px);
+    }
+
+    &--gamma {
+        @include font-size(26px);
+    }
+
+    &--delta {
+        @include font-size(20px);
+    }
+}

@@ -1,0 +1,13 @@
+.header-detail {
+    @include design-module-shadow();
+    background: $color-cd-green;
+    background: linear-gradient(0deg, #00f0b0 0%, #00d8cb 100%);
+    color: map_get($colors, 'color-definition__blue');
+}
+
+.detail-fee-list {
+  padding-left: 1em;
+  &__item {
+    padding-left: 0;
+  }
+}

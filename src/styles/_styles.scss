@@ -1,0 +1,50 @@
+/**
+ * _styles File
+ * Basic Styles
+ *
+ * @author michael gerstmann @top_webdesign
+ */
+
+/* + box-sizing */
+html { box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* = box-sizing */
+
+body {
+  font-family: $font-stack-sansserif;
+  @include font-size($font-size-normal);
+  line-height: $line-height-normal;
+  background: $color-background;
+}
+
+p {
+  @extend %typo-copy;
+}
+
+$color-link: $color-primary;
+$color-link--visit: $color-link;
+$color-link--hover: $color-link;
+$color-link--active: $color-link;
+a {
+  color: $color-link;
+}
+
+figure {
+  margin: inherit;
+}
+img {
+  max-width: 100%;
+}
+
+%list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-unstyled {
+  @extend %list-unstyled;
+}

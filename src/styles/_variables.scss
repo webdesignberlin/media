@@ -1,0 +1,77 @@
+/**
+ * + Project variables
+ * Main Variables for Project
+ *
+ * @author michael gerstmann @top_webdesign
+ */
+
+$debug-local: false;
+
+/* <@colors */
+$colors: (
+  /// Color White
+  /// @group Colors
+  /// @type Color
+        'color-definition__white': #ffffff,
+  /// Color Black
+  /// @group Colors
+  /// @type Color
+        'color-definition__black': #000,
+  /// Color Blue
+  /// @group Colors
+  /// @type Color
+        'color-definition__blue': #301968
+);
+/* colors@> */
+
+/// Color Foreground
+/// @group Colors
+/// @require $color-definition__white
+$color-foreground:  map-get($colors, color-definition__black);
+/// Color Background
+/// @group Colors
+/// @require $color-definition__black
+$color-background:  map-get($colors, color-definition__white);
+/// Color Primary
+/// @group Colors
+/// @require $color-cd-blue
+$color-primary:     map-get($colors, color-definition__blue);
+/* = Colors */
+
+/* + Z-Indexes */
+$z-layers: (
+        'notifications': 10
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+/* = Z-Indexes */
+
+
+/**
+ * + Typo
+ */
+$font-stack-sansserif:          'Open Sans', sans-serif;
+$font-stack-normal:             $font-stack-sansserif;
+
+$font-size-root:                16px !default;
+
+$font-size-normal:              16px !default;
+$font-size-small:               $font-size-normal / 1.2 !default;
+
+$line-height-normal:            1.6 !default;
+/* = Typo */
+
+/**
+ * Spacing
+ */
+$spacing-normal:                1.6rem !default;
+$spacing-small:                 $spacing-normal / 2 !default;
+$spacing-large:                 $spacing-normal * 2 !default;
+
+/* Grid Usage via _foundation-custom.scss */

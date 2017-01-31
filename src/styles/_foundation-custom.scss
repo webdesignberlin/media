@@ -1,0 +1,70 @@
+// Import foundation
+@import '../../node_modules/foundation-sites/scss/foundation';
+
+// Overwrite foundation standards
+/*$grid-column-responsive-gutter: (
+    small: $spacing-normal,
+    medium: $spacing-small,
+);*/
+
+$grid-column-gutter: (
+        small: 20px,
+        medium: 46px,
+);
+
+$breakpoints: (
+        small: 0px,
+        medium: 600px,
+        large: 900px,
+        xlarge: 1200px,
+        xxlarge: 1920px
+);
+$breakpoint-classes: (small medium large xlarge xxlarge);
+
+@if $debug-local == true {
+    .column,
+    .row {
+        border: 1px solid red;
+    }
+}
+
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+//@include foundation-everything;
+//@include foundation-global-styles;
+//@include foundation-flex-grid;
+//@include foundation-typography;
+//@include foundation-text-alignment; // Import Helper Classes, Part of 'foundation-typography'
+//@include foundation-button;
+//@include foundation-forms;
+@include foundation-visibility-classes;
+//@include foundation-float-classes;
+//@include foundation-accordion;
+//@include foundation-accordion-menu;
+//@include foundation-badge;
+//@include foundation-breadcrumbs;
+//@include foundation-button-group;
+//@include foundation-callout;
+//@include foundation-close-button;
+//@include foundation-drilldown-menu;
+//@include foundation-dropdown;
+//@include foundation-dropdown-menu;
+//@include foundation-flex-video;
+//@include foundation-label;
+//@include foundation-media-object;
+//@include foundation-menu;
+//@include foundation-off-canvas;
+//@include foundation-orbit;
+//@include foundation-pagination;
+//@include foundation-progress-bar;
+//@include foundation-slider;
+//@include foundation-sticky;
+//@include foundation-reveal;
+//@include foundation-switch;
+//@include foundation-table;
+//@include foundation-tabs;
+//@include foundation-thumbnail;
+//@include foundation-title-bar;
+//@include foundation-tooltip;
+//@include foundation-top-bar;

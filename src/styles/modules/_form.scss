@@ -1,0 +1,43 @@
+$form-color-input: map_get($colors, color-definition__white);
+
+.form {
+
+  max-width: 100%;
+
+  &--full {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 0;
+    max-width: 100%;
+    padding: $spacing-small;
+    border: 1px solid $form-color-input;
+    background-color: $form-color-input;
+    transition: border 0.3s ease, background 0.15s ease-in;
+
+    &[type='search']{
+      box-sizing: border-box;
+      -webkit-appearance: none;
+    }
+
+    &--minimal {
+
+      &:hover {
+        will-change: transform;
+      }
+
+      border-color: transparent;
+      //background: transparent;
+      &:focus {
+        background: transparent;
+        outline: none;
+        border-bottom-color: $color-primary;
+      }
+
+      color: $color-primary;
+    }
+  }
+
+}
